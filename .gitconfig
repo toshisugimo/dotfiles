@@ -1,0 +1,37 @@
+# This is Git's per-user configuration file.
+[user]
+    name  = *****
+    email = *****
+
+[alias]
+    st   = status --short --branch
+    lo   = log --pretty=format:'%C(yellow)commit %h  %<(64,trunc)%C(white)%s  %cr'
+    co   = checkout
+    br   = branch
+    cm   = commit
+    rs   = reset
+    sw   = show
+    df   = diff
+    dfc  = diff --cached
+    dfn  = diff --name-only
+    dfm  = diff master...HEAD
+    dfmn = diff master...HEAD --name-only
+    gr   = grep
+    hist = log --graph --pretty=format:'%Cred%h%Creset - %cd | %s %Cgreen(%cr)%C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=short -20
+    hists = log --graph --pretty=format:'%Cred%h%Creset - %cd | %s %Cgreen(%cr)%C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=short --stat -20
+    graph = log --graph --date=short --pretty=\"format:%C(yellow)%h %C(cyan)%ad %C(green)%an%Creset%x09%s %C(red)%d%Creset\"
+
+[core]
+    excludesfile = ~/.gitignore_global
+
+[init]
+    templatedir = ~/.git_template
+
+[color]
+    ui = auto
+
+[i18n]
+    commitencoding = utf-8
+
+[push]
+    default = simple
